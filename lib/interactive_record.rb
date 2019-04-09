@@ -57,10 +57,15 @@ class InteractiveRecord
         DB[:conn].execute(sql)
     end 
     
+<<<<<<< HEAD
     def self.find_by(attribute)
       key = attribute.keys.first 
       value = attribute.values.first 
       sql = "SELECT * FROM #{self.table_name} WHERE #{key} = '#{value}'"
+=======
+    def self.find_by(row)
+      sql = "SELECT * FROM #{self.table_name} WHERE row = grade.first "
+>>>>>>> d683fe5df45f02507d5593124520a9d62e52a244
       DB[:conn].execute(sql)
     end 
 end
